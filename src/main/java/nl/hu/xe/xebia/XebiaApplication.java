@@ -20,6 +20,7 @@ public class XebiaApplication {
      *         Dividing  (i+1)th element by ith element will give:
      *         nCi+1 / nCi = i! * (n-i)! / (i+1)! * (n-i-1)!  – On solving this
      *         nCi+1 = nCi  * (n-i) / (i+1) –  we get (i+1)th element with the help of ith element
+     *         nCr = (nCr-1 * (n - r + 1))/r - we get the final formula for retrieving nth row
      */
     List<Integer> triangleRow(int row) {
         ArrayList<Integer> pascalRow = new ArrayList<>();
