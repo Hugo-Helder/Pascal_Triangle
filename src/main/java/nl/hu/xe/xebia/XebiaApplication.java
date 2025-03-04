@@ -23,7 +23,7 @@ public class XebiaApplication {
      *         nCr = (nCr-1 * (n - r + 1))/r - we get the final formula for retrieving nth row
      */
     List<Integer> triangleRow(int row) {
-        ArrayList<Integer> pascalRow = new ArrayList<>();
+        List<Integer> pascalRow = new ArrayList<>();
 
         if (row < 0) {
             return List.of();

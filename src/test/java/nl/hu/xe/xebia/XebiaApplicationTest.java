@@ -10,12 +10,12 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class XebiaApplicationTest {
-    XebiaApplication x = new XebiaApplication();
 
     @ParameterizedTest
     @MethodSource("testdata")
     void triangleRow(int rowNumber, List<Integer> result) {
-        assertEquals(result, x.triangleRow(rowNumber));
+        XebiaApplication xebiaApplication = new XebiaApplication();
+        assertEquals(result, xebiaApplication.triangleRow(rowNumber));
     }
 
     static Stream<Arguments> testdata() {
@@ -26,7 +26,7 @@ class XebiaApplicationTest {
                 Arguments.of(2, List.of(1, 2, 1)),
                 Arguments.of(3, List.of(1, 3, 3, 1)),
                 Arguments.of(4, List.of(1, 4, 6, 4, 1)),
-                Arguments.of(20, List.of(1, 20, 190, 1140, 4845, 15504, 38760, 77520, 125970, 167960, 184756, 167960, 125970, 77520 , 38760, 15504, 4845, 1140, 190, 20, 1))
+                Arguments.of(20, List.of(1, 20, 190, 1140, 4845, 15504, 38760, 77520, 125970, 167960, 184756, 167960, 125970, 77520, 38760, 15504, 4845, 1140, 190, 20, 1))
 
         );
     }
