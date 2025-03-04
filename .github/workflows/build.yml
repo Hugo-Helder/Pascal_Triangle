@@ -26,5 +26,5 @@ jobs:
         with:
           name: ${{env.REPOSITORY_NAME}}-reports
           path: |
-            target/site/jacoco/
+            target/site
             target/pit-reports/
